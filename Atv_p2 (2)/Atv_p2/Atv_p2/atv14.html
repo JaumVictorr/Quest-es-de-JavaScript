@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var p, p1, p2, p3, p4, respostas, resultado, classe;
+    p = prompt("Telefonou para a vítima? (S/N): ").toUpperCase()
+    p1 = prompt("Esteve no local do crime? (S/N): ").toUpperCase()
+    p2 = prompt("Mora perto da vítima? (S/N): ").toUpperCase()
+    p3 = prompt("Devia para a vítima? (S/N): ").toUpperCase()
+    p4 = prompt("Já trabalhou com a vítima? (S/N): ").toUpperCase()
+    respostas = []
+    respostas.push(p, p1, p2, p3, p4)
+    resultado = respostas.filter(x => x=="S").length
+    classe = "Inocente"
+    if (resultado == 2) {
+        classe = "Suspeito"
+    } else if (resultado == 3 || resultado == 4) {
+        classe = "Cúmplice"
+    } else if (resultado == 5) {
+        classe = "Assassino"
+    }
+    alert(classe)
+
+
+</script>
+<a href="atv15.html"><button>Proxima Atv</button></a>
+</body>
+</html>

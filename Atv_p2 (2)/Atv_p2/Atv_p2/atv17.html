@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var soma, saltos, salto, _saltos,nome, media;
+    while (true) {
+        soma = 0
+        saltos = []
+        salto = 0
+        _saltos = []
+        nome = prompt("Insira o nome do atleta (Não insira nada para terminar): ")
+        if (nome == "") {
+            break
+        }
+        for (i = 0; i < 5; i++) {
+            salto = parseFloat(prompt(i+1 + "° Salto: "))
+            soma += salto
+            saltos.push(salto)
+        }
+        media = soma / 5
+        for (jump of saltos) {
+            saltos_.push(jump)
+            saltos_.push(" - ")
+        }
+        
+        alert("Resultado Final: \nAtleta: " + nome + "\nSaltos: " + saltos_.join("") + "\nMédia de saltos: " + media)
+    }
+
+</script>
+<a href="atv18.html"><button>Proxima Atv</button></a>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var temperatura, soma, meses, acimadamedia;
+    temperatura = []
+    soma = 0
+    meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+    acimadamedia = []
+    for (i=0;i<=11;i++) {
+        temperaturamedia = parseFloat(prompt("Insira a temperatura média do mês de " + meses[i]))
+        temperatura.push(temperaturamedia)
+        soma += temperaturamedia
+    }
+    let media = soma/12
+    for (temp in temperatura) {
+        if (temperatura[temp] > media) {
+            acimadamedia.push(Number(temp)+1)
+            acimadamedia.push("-")
+            acimadamedia.push(meses[temp])
+            acimadamedia.push(": ")
+            acimadamedia.push(temps[temp])
+            acimadamedia.push("\n")
+        }
+    }
+    alert("Media anual: "+ media + "\nAcima da media:\n" + acimadamedia)
+
+
+</script>
+<a href="atv14.html"><button>Proxima Atv</button></a>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+
+var notas, media, soma, nota;
+notas = []
+    media = 0
+    for (i=1;i<=10;i++) {
+        soma = 0
+        for (j=1;j<=4;j++) {
+            nota = parseFloat(prompt("Insira sua nota: "))
+            soma += nota
+        }
+        media = soma/4
+        notas.push(media)
+    }
+    alert(`Alunos com media maior ou igual a 7: ${notas.filter(x => x >= 7).length}`)
+
+</script>
+<a href="atv7.html"><button>Proxima Atv</button></a>
+</body>
+</html>

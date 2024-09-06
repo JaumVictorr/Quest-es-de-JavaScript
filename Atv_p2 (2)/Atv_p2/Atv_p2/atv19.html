@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var votos, elementos, voto, volt, jogador, ordem, count, porcentagem;
+    votos = []
+    elementos = ["Windowns Server", "Unix", "Linux", "Netware", "Mac OS", "Outro"]
+    while (true) {
+        voto = parseInt(prompt("1 - Windows Server\n2 - Unix\n3 - Linux\n4 - Netware\n5 - Mac OS\n6 - Outro\n\nSistema operacional (0=fim):"))
+        if (voto > 6 || voto < 0) {
+            alert("Informe um valor entre 1 e 6 ou 0 para sair!")
+            continue
+        }
+        if (voto == 0) {
+            break
+        }
+        votos.push(voto)
+    }
+    volt = []
+    jogador = 0
+    ordem = 0
+    votos.sort()
+    for (items of votos) {
+        count = votos.filter(x => x==items).length
+        if (count > jogador) {
+            maior = items
+            jogador = count
+        }
+        porcentagem = Math.round((count/votos.length)*100* 100) / 100
+        if (!votes.includes(elementos[items-1])) {
+            votes.push(elementos[items-1])
+            votes.push("    ")
+            votes.push(count)
+            votes.push("    ")
+            votes.push(porcentagem)
+            votes.push("%")
+            votes.push("\n")
+        }
+        ordem += 1
+    }
+    alert("Sistema Operacional  Votos   %\n------------------- ----- ---\n" + volt.join("") + "------------------- -----\n" + "Total    "+ votos.length +"\nO Sistema Operacional mais votado foi o " + elementos[maior-1] + ", com " + votos.filter(x => x==maior).length + " votos, correspondendo a " + (Math.round((votos.filter(x => x==maior).length/votos.length)*100* 100) / 100) +"% dos votos.")
+
+</script>
+<a href="atv20.html"><button>Proxima Atv</button></a>
+</body>
+</html>

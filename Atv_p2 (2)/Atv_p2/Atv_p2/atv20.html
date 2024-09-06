@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var salarios, abonos, valorminimo, soma, maior, salario, abono, salarioabono;
+    salarios = []
+    abonos = []
+    valorminimo = 0
+    soma = 0
+    maior = 0
+    while (true) {
+        salario = parseInt(prompt("Salario (0 para sair): "))
+        if (salario == 0) {
+            break
+        }
+        salarios.push(salario)
+        abono = (salario/100)*20
+        if (abono <= 100) {
+            abono = 100
+            valorminimo +=1
+        }
+        abonos.push(abono)
+        soma += abono
+        if (abono > maior) {
+            maior = abono
+        }
+    }
+    salarioabono = []
+    for (sal in salarios) {
+        salarioabono.push(salarios[sal])
+        salarioabono.push("  -  ")
+        salarioabono.push(abonos[sal])
+        salarioabono.push("\n")
+    }
+    alert("Projeção de Gastos com Abono\n============================\n\nSalário  -   Abono\n" + salabono.join("") + "Foram processados " + salarios.length + " colaboradores\nTotal gasto com abonos: R$" + soma + "\nValor mínimo pago a " + valorminimo + " colaboradores\nMaior valor de abono pago: R$" + maior)
+
+</script>
+<a href="atv21.html"><button>Proxima Atv</button></a>
+</body>
+</html>

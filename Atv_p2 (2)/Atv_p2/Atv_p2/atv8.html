@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+ 
+ var idades, alturas, idade, altura;
+ idades = []
+    alturas = []
+    for (i=1;i<=5;i++) {
+        idade = parseInt(prompt("Pessoa "+ i + "\nInsira sua idade"))
+        altura = parseFloat(prompt("Pessoa "+ i + "\nInsira sua altura"))
+        idades.push(idade)
+        alturas.push(altura)
+    }
+    alert(`Idades: ${idades.reverse()}\nAlturas: ${alturas.reverse()}`)
+
+</script>
+<a href="atv9.html"><button>Proxima Atv</button></a>
+</body>
+</html>

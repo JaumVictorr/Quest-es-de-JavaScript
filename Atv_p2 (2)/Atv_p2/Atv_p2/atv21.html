@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var carros, kmsporlitro, carroeconomico, carro, kmporlitro, porKM, preco, menor, consumo, tabula;
+    carros = []
+    kmsporlitro = []
+    porKM = []
+    preco = []
+    menor = 10000
+    for (i=1;i<=5;i++) {
+        carro = prompt("Veiculo" + i + "\nNome:")
+        consumoPorLitro = parseFloat(prompt("Km por litro:"))
+        carros.push(carro)
+        consumosPorLitro.push(consumoPorLitro)
+    }
+    for (consumo in kmsporlitro) {
+        if (kmsporlitro[consumo] < menor) {
+            menor = kmsporlitro[consumo]
+            carroeconomico = carros[consumo]
+        }
+        porKM.push(Math.round(1000/kmsporlitro[consumo]* 100)/100)
+        preco.push(Math.round((1000/kmsporlitro[consumo])*2.25* 100)/100)
+    }
+    tabula = []
+    for (items in carros) {
+        tabula.push(Number(items)+1 + " - " + carros[items] + "   - " + kmsporlitro[items] + " - " + porKM[items] + " - " + preco[items] + "\n")
+    }
+    alert("Relatório final\n" + tabula.join("") + "O menor consumo é do " + carroeconomico)
+
+</script>
+<a href="atv22.html"><button>Proxima Atv</button></a>
+</body>
+</html>

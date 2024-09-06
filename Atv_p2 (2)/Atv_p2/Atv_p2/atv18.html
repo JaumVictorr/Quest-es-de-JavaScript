@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var votos, volt, jogador, count, porcentagem;
+    votos = []
+    while (true) {
+        voto = parseInt(prompt("Número do jogador (0=fim):"))
+        if (voto > 23 || voto < 0) {
+            alert("Informe um valor entre 1 e 23 ou 0 para sair!")
+            continue
+        }
+        if (voto == 0) {
+            break
+        }
+        votos.push(voto)
+    }
+    volt = []
+    jogador = 0
+    for (items of votos) {
+        count = votos.filter(x => x==items).length
+        if (count > jogador) {
+            maior = items
+            jogador = count
+        }
+        porcentagem= Math.round((count/votos.length)*100* 100) / 100
+        if (!votes.includes(items)) {
+            votes.push(items)
+            votes.push("    ")
+            votes.push(count)
+            votes.push("    ")
+            votes.push(porcentagem)
+            votes.push("%")
+            votes.push("\n")
+        }
+    }
+    alert("Resultado da votação:\nForam computados " + votos.length + " votos\nJogador  Votos   %\n" + volt.join("") + "\nO melhor jogador foi o número " + maior + ", com " + votos.filter(x => x==maior).length + " votos, correspondendo a " + (Math.round((votos.filter(x => x==maior).length/votos.length)*100* 100) / 100) +"% do total de votos.")
+
+</script>
+<a href="atv19.html"><button>Proxima Atv</button></a>
+</body>
+</html>

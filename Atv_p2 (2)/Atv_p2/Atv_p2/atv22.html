@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var mouses, necessidades, mouse, ratos, item, count, porcentagem;
+    mouses = [];
+    necessidades = ["Necessita da esfera", "Necessita de limpeza", "Necessita troca de cabo", "Quebrado ou inutilizado"]
+    while (true) {
+        mouse = parseInt(prompt("1 - Necessita da esfera\n2 - Necessita de limpeza\n3 - Necessita troca de cabo\n4 - Quebrado ou inutilizado\n\nSituação do mouse (0=fim):"));
+        if (mouse > 4 || mouse < 0) {
+            alert("Informe um valor entre 1 e 4 ou 0 para sair!"); 
+            continue;
+        }
+        if (isNaN(mouse)) {
+            alert("Insira um numero válido")
+            continue
+        }
+        if (mouse === 0) {
+            break;
+        }
+        mouses.push(mouse);
+    }
+
+    ratos = [];
+    mouses.sort();
+    for (item of mouses) {
+        count = mouses.filter(x => x === item).length;
+        porcentagem = Math.round((count / mouses.length) * 100 * 100) / 100;
+        if (!ratos.includes(necessidades[item-1])) {
+            ratos.push(necessidades[item-1]);
+            ratos.push("       ");
+            ratos.push(count);
+            ratos.push("                            ");
+            ratos.push(porcentagem);
+            ratos.push("%\n");
+        }
+    }
+
+    alert("Resultado da votação:\nQuantidade de mouses: " + mouses.length + "\nSituação                     Quantidade                  Percentual\n" + ratos.join(""));
+
+</script>
+<a href="atv23.html"><button>Proxima Atv</button></a>
+</body>
+</html>

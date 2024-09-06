@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var lista, salario;
+    lista = []
+    salario = 0
+    while (true) {
+        vendedor = parseInt(prompt("Insira a venda bruta (-1 para terminar): "))
+        if (vendedor == -1) {
+            break
+        }
+        salario = Math.trunc((200 + vendedor/100*9)/100)
+        if (salario > 10) {
+            salario = 10
+        }
+        lista.push(salario)
+    }
+    alert("Salários da empresa: \n\n" + "R$200-299: " + lista.filter(lista => lista === 2).length + "\n" + "R$300-399: " + lista.filter(lista => lista === 3).length + "\n" + "R$400-499: " + lista.filter(lista => lista === 4).length + "\n" + "R$500-599: " + lista.filter(lista => lista === 5).length + "\n" + "R$600-699: " + lista.filter(lista => lista === 6).length + "\n" + "R$700-799: " + lista.filter(lista => lista === 7).length + "\n" + "R$800-899: " + lista.filter(lista => lista === 8).length + "\n" + "R$900-999: " + lista.filter(lista => lista === 9).length + "\n" + "R$1000 em diante: " + lista.filter(lista => lista === 10).length)
+
+
+</script>
+<a href="atv17.html"><button>Proxima Atv</button></a>
+</body>
+</html>

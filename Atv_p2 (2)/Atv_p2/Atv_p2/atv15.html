@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+<script>
+    
+    var soma, numero, notas, nota, media, menosque7, maiorquemedia, notasreverse;
+    soma = 0
+    numero = 0
+    notas = []
+    while (true) {
+        let nota = parseFloat(prompt("Insira uma nota (-1 para encerrar)"))
+        if (nota == -1) {
+            break
+        }
+        notas.push(nota)
+        soma += nota
+        numero += 1
+    }
+    media = soma / numero
+    menosque7 = []
+    maiorquemedia = []
+    for (i in notas) {
+        if (notas[i] > media) {
+            maiorquemedia.push(notas[i])
+        }
+        if (notas[i] < 7) {
+            menorque7.push(notas[i])
+        }
+    }
+    notasreverse = []
+    for (let notarever of notas.reverse()) {
+        notasreverse.push(notarever)
+        notasreverse.push("\n")
+    }
+    notas.reverse()
+    alert("Quantidade de valores: " + numero + "\n" + "Notas em ordem de leitura: "+notas.join("") + "\n" + "Notas em ordem reversa: \n" + notasreverse.join("") + "\n" + "Soma: " + soma + "\n" + "Media: " + media + "\n" + "Maiores que a media: " + maiorquemedia +"\n" + "Menores que sete: " + menosque7)
+
+
+</script>
+<a href="atv16.html"><button>Proxima Atv</button></a>
+</body>
+</html>
